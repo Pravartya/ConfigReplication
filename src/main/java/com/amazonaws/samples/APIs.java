@@ -10,7 +10,7 @@ public class APIs {
 	public CreateApplicationResponse createApplication(CreateApplicationRequest createApplicationRequest) {
 		
 		
-		CreateApplicationResponse response =  new CreateApplicationResponse();
+		CreateApplicationResponse response =  new CreateApplicationResponse();     
 		response.setDescription(createApplicationRequest.getDescription());
 		response.setId("App ID");                                                            // Application ID needs to be created
 		response.setName(createApplicationRequest.getName());
@@ -96,6 +96,23 @@ public class APIs {
 		return null;
 		
 	}
+	
+	
+	//GET APPLICATION
+	public GetApplicationResponse getApplication(GetApplicationRequest getApplicationRequest) {
+		
+		GetApplicationResponse response = new GetApplicationResponse();
+		response.setDescription("Application Description");
+		response.setId("ApplicationID");
+		response.setName("ApplicationName");
+
+		
+		return response;
+		
+		
+		
+	}
+	
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
