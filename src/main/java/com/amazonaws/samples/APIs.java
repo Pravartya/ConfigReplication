@@ -36,9 +36,66 @@ public class APIs {
 	}
 	
 	//CREATE DEPLOYMENT STRATEGY
+	public CreateDeploymentStrategyResponse createDeploymentStrategy(CreateDeploymentStrategyRequest createDeploymentStrategyRequest) {
+		CreateDeploymentStrategyResponse response = new CreateDeploymentStrategyResponse();
+		response.setDeploymentDurationInMinutes(createDeploymentStrategyRequest.getDeploymentDurationMinutes());
+		response.setDescription(createDeploymentStrategyRequest.getDecription());
+		response.setFinalBakeTimeInMinutes(createDeploymentStrategyRequest.getDeploymentDurationMinutes());
+		response.setGrowthFactor(createDeploymentStrategyRequest.getGrowthFactor());
+		response.setGrowthType(createDeploymentStrategyRequest.getGrowthType());
+		response.setId("Deployment Strategy ID");                                            //Deployment Strategy ID
+		response.setName(createDeploymentStrategyRequest.getName());
+		response.setReplicateTo(createDeploymentStrategyRequest.getReplicateTo());
+		
+		return response;
+		
+ }
+	
+	
+	//CREATE ENVIRONMENT
+	public CreateEnvResponse createEnv(CreateEnvRequest createEnvRequest) {
+		CreateEnvResponse response =  new CreateEnvResponse();
+		response.setApplicationId("Application ID") ;                                           //Application ID 
+		response.setDescription(createEnvRequest.getDescription());
+		response.setId("Env ID");
+		response.setMonitors(createEnvRequest.getMonitors());
+		response.setName(createEnvRequest.getName());
+		response.setState("State of Env");                                                      //How do the response know?
+		
+		
+		return response;
+	
+		
+	}
+	
+	//DELETE APPLICATION
+	public DeleteApplicationResponse deleteApplication(DeleteApplicationRequest deleteApplicationRequest){
+		return null;
+	
+	}
+	
+
+	//DELETE CONFIGURATION PROFILE
+	public DeleteConfigurationProfileResponse deleteConfigurationProfile(DeleteConfigurationProfileRequest deleteConfigurationProfileRequest) {
+		return null;
+		
+	}
 	
 	
 	
+	//DELETE DEPLOYMENT STRATEGY
+	public DeleteDeploymentStrategyResponse deleteDeploymentStrategy(DeleteDeploymentStrategyRequest deleteDeploymentStrategyRequest) {
+		return null;
+		
+	}
+
+	
+	
+	//DELETE ENV
+	public DeleteEnvironmentResponse deleteEnvironment(DeleteEnvironmentRequest deleteEnvironmentRequest) {
+		return null;
+		
+	}
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
